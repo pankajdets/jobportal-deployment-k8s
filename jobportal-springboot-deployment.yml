@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jobportal-springboot
+spec:
+  selector:
+    matchLabels:
+      app: jobportal-springboot
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jobportal-springboot
+    spec:
+      containers:
+        - name: jobportal-springboot
+          image: pankajdets/springboot
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MONGO_URL
+              value: mongodb://mongo:27017/dev
