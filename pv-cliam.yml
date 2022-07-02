@@ -5,6 +5,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
+  storageClassName: nodestorage
   resources:
     requests:
       storage: 10Gi 
