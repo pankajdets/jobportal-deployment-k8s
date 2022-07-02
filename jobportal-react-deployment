@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jobportal-react
+spec:
+  selector:
+    matchLabels:
+      app: jobportal-react
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jobportal-react
+    spec:
+      containers:
+        - name: jobportal-react
+          image: pankajdets/react
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
