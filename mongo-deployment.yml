@@ -19,7 +19,7 @@ spec: #inside your deployment we need to provide spec how this deployment api wi
     spec: #we define container spec
        containers:
           - name: mongo   
-            image: mongo:3.6.17-xenial
+            image: pankajdets/mongo
             ports:
               - containerPort: 27017 
                 name: mongo 
