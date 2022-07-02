@@ -27,7 +27,7 @@ spec: #inside your deployment we need to provide spec how this deployment api wi
             volumeMounts:
             - name: storage  
               mountPath: /data/db         
-        volumes: #the name of the volume and the mount will be same
+       volumes: #the name of the volume and the mount will be same
           - name: storage
             persistentVolumeClaim:
             #mapped to pvc claim we created earlier
