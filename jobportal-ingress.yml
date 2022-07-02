@@ -9,9 +9,11 @@ spec:
       paths:
         - path: /?(.*)
           backend:
-            serviceName: jobportal-react-service
-            servicePort: 80
+            service:
+              name: jobportal-react-service
+              servicePort: 80
         - path: /api/?(.*)
           backend:
-            serviceName: jobportal-springboot
-            servicePort: 8080
+            service:
+              name: jobportal-springboot
+              servicePort: 8080
